@@ -38,3 +38,6 @@ for (var prop in casota) {
   /*console.log(prop);*/
   console.log(prop + ":" + casota[prop]);
 }
+
+var entrada = prompt("Hola amigos");
+console.log(entrada);
