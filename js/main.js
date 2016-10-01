@@ -24,20 +24,70 @@ if (valor === 7) {
 var num = 0;
 while(num<10){
   console.log(++num);
-}*/
+}
 
 var casa = {altura:100, ancho:400};
 var casota = Object.create(casa);
 var arreglo = ["a" , 5 , true , "abc"];
 casota.ventana = 100;
 for(var pos in arreglo){
-  /*console.log(pos);*/
+  //console.log(pos);
   console.log(arreglo[pos]);
 }
 for (var prop in casota) {
-  /*console.log(prop);*/
+  //console.log(prop);
   console.log(prop + ":" + casota[prop]);
 }
 
 var entrada = prompt("Hola amigos");
 console.log(entrada);
+
+var operador = "suma";
+var res = NaN;
+switch (operador) {
+  case "suma":
+    res = 4+4;
+    console.log(res);
+  case "resta":
+    res = 4-4;
+    console.log(res);
+  break;
+  default:
+  console.log(res);
+
+}
+console.log(res);
+
+var i=0;
+while (i<=10) {
+  console.log(i);
+  continue;//Te lleva a la siguiente instruccion si hubiese un for, iria al for y asi sucesivamente. En este caso se devuelve al while
+  i++;//nunca entro a esta instruccion
+
+}
+console.log("fin");
+
+var i=0;
+while (++i <= 1000) {
+  if (i % 2 === 1) {
+    continue;
+  }
+  console.log(i);//imprime numeros pares menores a 1000
+}*/
+
+var Figure = {
+"lados" : 4,
+"color" : "black",
+"longitud_lado" : 2,
+"perimetro" : function(){
+  return this.lados * this.longitud_lado;
+ }
+};
+
+var Triangle = Object.create(Figure);
+for(var prop_name in Triangle){
+  console.log(prop_name + ":" + Triangle[prop_name]);
+}
+
+Triangle.lados = 3;
+console.log(Triangle.perimetro());
