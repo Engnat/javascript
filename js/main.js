@@ -106,6 +106,21 @@ var pentagon = Figure(5,3);
 
 pentagon.color = "red";
 
+var FigureNonRegular = function(){
+  var parent = new Figure();
+  figure_non_regular = Object.create(parent);
+  figure_non_regular.angle = 120;
+  return figure_non_regular;
+};
+
+var rhombus = new FigureNonRegular();
+var rectagle_triangle = new FigureNonRegular();
+
+rhombus.angle = 70;
+rectagle_triangle.angle = 90;
+
 console.log(triangle);
 console.log(square);
 console.log(pentagon);
+console.log(rhombus);
+console.log(rectagle_triangle);
