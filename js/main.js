@@ -73,7 +73,7 @@ while (++i <= 1000) {
     continue;
   }
   console.log(i);//imprime numeros pares menores a 1000
-}*/
+}
 
 var Figure = {
 "lados" : 4,
@@ -90,4 +90,22 @@ for(var prop_name in Triangle){
 }
 
 Triangle.lados = 3;
-console.log(Triangle.perimetro());
+console.log(Triangle.perimetro());*/
+
+var Figure = function(lados=3, longitud=2){
+  return  {
+    lados: lados,
+    logitud: 2,
+    color: "black",
+  };
+};
+//creacion de nuevos objetos de tipo figura
+var triangle = Figure(3,3);
+var square = Figure(5,5);
+var pentagon = Figure(5,3);
+
+pentagon.color = "red";
+
+console.log(triangle);
+console.log(square);
+console.log(pentagon);
