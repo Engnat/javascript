@@ -117,10 +117,10 @@ var rhombus = new FigureNonRegular();
 var rectagle_triangle = new FigureNonRegular();
 
 rhombus.angle = 70;
-rectagle_triangle.angle = 90;
+rectangle_triangle.angle = 90;
 
 console.log(triangle);
 console.log(square);
 console.log(pentagon);
 console.log(rhombus);
-console.log(rectagle_triangle);
+console.log(rectangle_triangle);
